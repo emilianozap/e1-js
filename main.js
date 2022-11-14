@@ -38,7 +38,7 @@ const pizza = [{
 /*🔥 Utilizando métodos de array e iterando sobre el array de pizzas, realizar las siguientes actividades, imprimiendo en consola:
 a)  Las pizzas que tengan un id impar.*/
 const numImpar = pizza.filter((pizza)=> {
-    if(pizza.id % 2 === 1){
+    if(pizza.id % 2 !== 0){
         console.log(`la ${pizza.nombre} tiene id impar`)
 
     }
@@ -61,5 +61,6 @@ const pizzas = pizza.forEach((pizza) =>{
 /* d) Todos los ingredientes de cada pizza (En cada iteración imprimir los ingredientes de la pizza actual). Ayuda: van a tener que realizar dos recorridos, ya que cada pizza del array de pizzas tiene un array de ingredientes.*/
 
 const pizzaIngrediente = pizza.forEach((pizza) =>{
-    console.log(pizza.nombre +" sus ingredientes son "+ pizza.ingredientes)
+    console.log(pizza.nombre +" sus ingredientes son ")
+    pizza.ingredientes.forEach((ingredientes) => console.log(ingredientes))
 })
